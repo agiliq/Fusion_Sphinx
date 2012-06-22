@@ -1,0 +1,91 @@
+{% extends "basic/layout.html" %}
+{% set css_files = ['_static/application.css', '_static/jquery-ui.css', '_static/layout.css', '_static/skeleton.css', '_static/text.css', '_static/unitedNationsBlue.css', '_static/white_pattern_02.css', '_static/css', '_static/css(1)', '_static/background.css'] + css_files %}
+
+{% block header %}
+    <div id="wrap">
+        <div id="headerMeta"></div>
+        <div id="header">
+            <div class="container">
+                <div class="sixteen columns">
+                    {%- if logo %}
+                        <div class="logo"><br />
+                            <h1><a href="{{ pathto(master_doc) }}"><img src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+                            </a></h1>
+                            <h3><div class="headertitle"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></div></h3>
+                        </div>
+                    {%- endif %}
+                </div>
+            </div>
+        </div>
+{% endblock %}
+    
+{%- block relbar1 %}{% endblock %}
+    
+{% block content %}
+        <div id="main_wrap">
+            <div id="main">
+                <div class="container">
+            		<div class="twelve columns blog post main-content">
+                        <div class="content no-img">
+                            <div class="twelve columns omega">
+                                {%- block document %}
+                                    {{ super() }}
+                                {%- endblock %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four columns sidebar">
+                        <div class="gce-widget">
+                            {%- block sidebarsearch %}
+                                <form method="get" action="{{ pathto('search') }}">
+                                    <fieldset>
+                                        <input id="q" class="search_input" type="text" name="q" value="search site">
+                                        <input class="submit" type="submit" value="Search">
+                                    </fieldset>
+                                </form>
+                            {%- endblock %}
+                        </div>
+                        <div class="pages-widget">
+                            {%- block sidebartoc %}
+                                <h3><a href="{{ pathto(master_doc) }}">{{ _('Table Of Contents') }}</a></h3>
+                                {{ toctree() }}
+                            {%- endblock %}
+                            {%- block sidebarsourcelink %}
+                                {%- if show_source and has_source and sourcename %}
+                                    <h3 style="margin-top: 1.5em;">{{ _('This Page') }}</h3>            
+                                        <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a>
+                                {%- endif %}
+                            {%- endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{%- block relbar2 %}{% endblock %}
+
+{% block footer %}
+        <div id="footer">
+            <div class="container">
+                <div class="sixteen columns">
+                    <div class="left">
+                        {%- for rellink in rellinks|reverse %}
+                            <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+                            {%- if not loop.last %}{{ reldelim2 }}{% endif %}
+                        {%- endfor %}
+                        {%- if show_source and has_source and sourcename %}
+                            <br/>
+                            <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a>
+                        {%- endif %}
+                    </div>
+
+                    <div class="right">
+                        {{ super() }}
+                    </div>
+                    <div class="clearer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
