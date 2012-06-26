@@ -1,0 +1,45 @@
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+div.admonition dt {
+    font-weight: bold;
+}
+div.admonition dl {
+    margin-bottom: 0;
+}
+p.admonition-title {
+    margin: 0px 10px 5px 0px;
+    font-weight: bold;
+}
+div.body p.centered {
+    text-align: center;
+    margin-top: 25px;
+}
+div.admonition p {
+margin-bottom: 5px;
+}
+div.body p, div.body dd, div.body li {
+text-align: justify;
+line-height: 130%;
+}
+p.admonition-title {
+margin: 0px 10px 5px 0px;
+font-weight: bold;
+}
+.first {
+margin-top: 0 !important;
+}
+user agent stylesheetp {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+p.admonition-title::after {
+content: ":";
+}
