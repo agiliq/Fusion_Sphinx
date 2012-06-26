@@ -1,5 +1,5 @@
 {% extends "basic/layout.html" %}
-{% set css_files = ['_static/application.css', '_static/jquery-ui.css', '_static/layout.css', '_static/skeleton.css', '_static/text.css', '_static/unitedNationsBlue.css', '_static/white_pattern_02.css', '_static/css', '_static/css(1)', '_static/background.css'] + css_files %}
+{% set css_files = ['_static/application.css', '_static/jquery-ui.css', '_static/layout.css', '_static/skeleton.css', '_static/text.css', '_static/unitedNationsBlue.css', '_static/white_pattern_02.css', '_static/css.css', '_static/css(1).css', '_static/background.css', '_static/admonitions.css'] + css_files %}
 
 {% block header %}
     <div id="wrap">
@@ -7,13 +7,17 @@
         <div id="header">
             <div class="container">
                 <div class="sixteen columns">
-                    {%- if logo %}
-                        <div class="logo"><br />
-                            <h1><a href="{{ pathto(master_doc) }}"><img src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-                            </a></h1>
-                            <h3><div class="headertitle"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></div></h3>
-                        </div>
-                    {%- endif %}
+                    <div class="logo">
+                        {%- if logo %}
+                                <h1><a href="{{ pathto(master_doc) }}"><img src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+                                </a></h1>
+                        {%- endif %}
+                        {%- if shorttitle %}
+                                <h2><div class="headertitle"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></div></h2>
+                        {%- else %}
+                                <h2><div class="headertitle"><a href="{{ pathto(master_doc) }}">{{ docstitle|e }}</a></div></h2>
+                        {%- endif %}
+                    </div>
                 </div>
             </div>
         </div>

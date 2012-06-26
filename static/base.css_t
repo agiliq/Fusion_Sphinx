@@ -339,5 +339,63 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
-
-
+    a.headerlink {
+        visibility: hidden;
+        font-size: 0.85em;
+        margin-left: 6px;
+        padding: 0 4px 0 4px;
+        text-decoration: none!important;
+        color: #807F7D;
+    }
+    pre {
+        font-size: medium;
+        font: 12px/1.4em Verdana,sans-serif;
+        background: #E0FFB8;
+        border: 1px solid #94DA3A;
+        border-width: 1px 0;
+        margin: 1em 0;
+        padding: .3em .4em;
+        overflow: auto;
+        display: block;
+        font-family: monospace;
+        white-space: pre;
+    }
+    code {
+        font-size: medium;
+        font: 12px/1.4em Verdana,sans-serif;
+        background: #E0FFB8;
+        margin: 1em 0;
+        padding: .3em .4em;
+        font-family: monospace;
+        white-space: pre;
+    }
+    h1:hover > a.headerlink,
+    h2:hover > a.headerlink,
+    h3:hover > a.headerlink,
+    h4:hover > a.headerlink,
+    h5:hover > a.headerlink,
+    h6:hover > a.headerlink,
+    dt:hover > a.headerlink { visibility: visible; }
+    div.headertitle a { color: black; text-decoration: none; }
+    .literal { white-space:nowrap; }
+    .literal { color:#378D55; }
+    #sidebar .literal { color:white; background:transparent; font-size:11px; }
+    h4 .literal { color: #378D55; font-size: 13px; }
+    dt .literal, table .literal { background:none; }
+    #bd a.reference { text-decoration: none; }
+    #bd a.reference tt.literal { border-bottom: 1px #234f32 dotted; }
+    dl {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    dt {
+        font-weight: bold;
+        color: black;
+        margin-top: .5em;
+        font-size: 1.1em;
+        display: block;
+    }
+    dd { margin-bottom: .8em; margin-left: 15px; }

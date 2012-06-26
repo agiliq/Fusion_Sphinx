@@ -392,6 +392,19 @@ ul.bullet li{
 }
 .logo h1 img{
     display: block;
+    height: 80px;
+    width: 160px;
+    margin: 5px 5px 5px 5px;
+}
+.logo h2{
+    display: inline-block;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    text-transform: none;
+    border-left: 1px solid #898989;
+    padding-left: 10px;
+    color: #898989;
+    margin: 25px 10px 25px 10px;
 }
 .logo h3{
     display: inline-block;
@@ -401,7 +414,7 @@ ul.bullet li{
     border-left: 1px solid #898989;
     padding-left: 10px;
     color: #898989;
-    margin: 36px 0 36px 10px;
+    margin: 25px 10px 25px 10px;
 }
 .logo h5{
     display: inline-block;
@@ -411,7 +424,7 @@ ul.bullet li{
     border-left: 1px solid #898989;
     padding-left: 10px;
     color: #898989;
-    margin: 36px 0 36px 10px;
+    margin: 25px 10px 25px 10px;
 }
 .logo h1 span{
     display: block;
