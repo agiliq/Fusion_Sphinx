@@ -399,3 +399,4 @@
         display: block;
     }
     dd { margin-bottom: .8em; margin-left: 15px; }
+    ul { padding-left: 2em; }
