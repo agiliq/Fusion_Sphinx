@@ -360,7 +360,7 @@
         font-family: monospace;
         white-space: pre;
     }
-    code {
+    code, cite {
         font-size: medium;
         font: 12px/1.4em Verdana,sans-serif;
         background: #E0FFB8;
