@@ -399,4 +399,7 @@
         display: block;
     }
     dd { margin-bottom: .8em; margin-left: 15px; }
-    ul { padding-left: 2em; }
+    div.toctree-wrapper ul { padding-left: 1em; }
+    div.toctree-wrapper ul li { padding: 2px 0; }
+    div.toctree-wrapper ul ul { margin: 4px 0 2px 10px; }
+    div.toctree-wrapper li ul { list-style: circle; }
