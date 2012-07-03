@@ -403,3 +403,10 @@
     div.toctree-wrapper ul li { padding: 2px 0; }
     div.toctree-wrapper ul ul { margin: 4px 0 2px 10px; }
     div.toctree-wrapper li ul { list-style: circle; }
+    div.left h3{
+        text-transform: uppercase;
+        margin-bottom: 2px
+    }
+    .highlighted {
+        background-color: #FBE54E;
+    }

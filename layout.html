@@ -43,8 +43,8 @@
                             {%- block sidebarsearch %}
                                 <form method="get" action="{{ pathto('search') }}">
                                     <fieldset>
-                                        <input id="q" class="search_input" type="text" name="q" value="search site">
-                                        <input class="submit" type="submit" value="Search">
+                                        <input id="q" class="search_input" type="text" name="q" value="search site" onclick="this.value='';" onfocus="javascript: if (formfield.defaultValue==formfield.value)formfield.value = ''" onblur="this.value=!this.value?'search site':this.value;" />
+                                        <input class="submit" type="submit" value="Search" />
                                     </fieldset>
                                 </form>
                             {%- endblock %}
@@ -74,12 +74,13 @@
             <div class="container">
                 <div class="sixteen columns">
                     <div class="left">
+                        <h3>
                         {%- for rellink in rellinks|reverse %}
                             <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
                             {%- if not loop.last %}{{ reldelim2 }}{% endif %}
                         {%- endfor %}
+                        </h3>
                         {%- if show_source and has_source and sourcename %}
-                            <br/>
                             <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a>
                         {%- endif %}
                     </div>
