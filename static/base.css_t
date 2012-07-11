@@ -410,4 +410,8 @@
     .highlighted {
         background-color: #FBE54E;
     }
-    div.right { float: right; }
+    div.right {
+        float: right;
+        margin-bottom: 5px;
+    }
+    div.right a{ font-size:18px; }
