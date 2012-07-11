@@ -410,3 +410,4 @@
     .highlighted {
         background-color: #FBE54E;
     }
+    div.right { float: right; }

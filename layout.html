@@ -62,6 +62,16 @@
                             {%- endblock %}
                         </div>
                     </div>
+                    <div class="sixteen columns">
+                        <div class="right">
+                            <h3>
+                                {%- for rellink in rellinks|reverse %}
+                                    <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+                                    {%- if not loop.last %}{{ reldelim2 }}{% endif %}
+                                {%- endfor %}
+                            </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,24 +82,61 @@
 {% block footer %}
         <div id="footer">
             <div class="container">
-                <div class="sixteen columns">
-                    <div class="left">
-                        <h3>
-                        {%- for rellink in rellinks|reverse %}
-                            <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-                            {%- if not loop.last %}{{ reldelim2 }}{% endif %}
-                        {%- endfor %}
-                        </h3>
-                        {%- if show_source and has_source and sourcename %}
-                            <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow">{{ _('Show Source') }}</a>
-                        {%- endif %}
+                <div class="four columns">
+                    <div class="contact-widget">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><span>email :</span> <a href="#" class="test">hello@agiliq.com</a></li>
+                            <li><span>address :</span><p> Agiliq Info Solutions India Pvt Ltd,<br/>
+                            Flat No. 302, Siri Sampada Appts,<br/>
+                            Near Madhapur Police Station,<br/>
+                            Hyderabad - 500081. India.</p>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="right">
-                        {{ super() }}
-                    </div>
-                    <div class="clearer"></div>
                 </div>
+                <div class="four columns">
+                    <div class="know-widget">
+                        <h4>Know More</h4>
+                        <ul>
+                            <li> <a class="twitter" href="http://twitter.com/agiliqdotcom">Follow us on Twitter</a></li>
+                            <li> <a class="facebook" href="http://facebook.com/agiliq">Connect us on Facebook</a></li>
+                            <li> <a class="linkedin" href="http://www.linkedin.com/company/agiliq-info-solutions-india-pvt-ltd">Linkden</a></li>
+                            <li><a class="youtube" href="http://www.youtube.com/user/agiliq">Youtube - Python Screencasts</a></li>
+                            <li> <a class="posterous" href="http://people.agiliq.com/">Our Posterous</a></li>
+                            <li> <a class="tumblr" href="http://agiliq.tumlr.com/">Our Tumblr</a></li>
+                            <li> <a class="code" href="https://github.com/agiliq/">Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="four columns">
+                    <div class="books-widget">
+                        <h4>Read Our Books</h4>
+                        <ul>
+                            <li> <a href="http://agiliq.com/books/djangodesignpatterns/">Django Design Pattrens</a></li>
+                            <li> <a href="http://agiliq.com/books/djenofdjango/">Djen of Django</a></li>
+                            <li> <a href="http://agiliq.com/books/djangogotchas/">Django Gotchas</a></li>
+                            <li> <a href="http://agiliq.com/softwareconsulting/">Software Consulting Howto</a></li>
+                        </ul>
+                    </div>
+                </div>
+               <div class="four columns">
+                   <div class="links-widget">
+                       <h4>Links</h4>
+                       <ul>
+                           <li> <a href="http://agiliq.com">Home</a></li>
+                           <li> <a href="http://agiliq.com/contactus">Contact Us</a></li>
+                           <li> <a href="http://agiliq.com/whoweare">Who we are</a></li>
+                           <li> <a href="http://agiliq.com/blog/">Blog</a></li>
+                           <li> <a href="http://agiliq.com/forum/">Forum</a></li>
+                           <li> <a href="http://agiliq.com/articles/">Articles</a></li>
+                           <li> <a href="http://agiliq.com/newsletter/">Newsletter</a></li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="copyright">
+                        {{ super() }}
+               </div>
             </div>
         </div>
     </div>
