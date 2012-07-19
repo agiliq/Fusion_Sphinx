@@ -414,4 +414,5 @@
         float: right;
         margin-bottom: 5px;
     }
-    div.right a{ font-size:18px; }
+    div.right a { font-size:18px; }
+    div.toctree-wrapper a { text-decoration:none; }
